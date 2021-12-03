@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './component/Navbar';
+import AddWork from  "../src/component/addList/AddWork";
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Navbar/>
+      <AddWork/> */}
+      <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={3}>
+        <Grid item xs >
+          {/* <Item>xs</Item> */}
+        </Grid>
+        <Grid item xs={6}>
+        <AddWork/>
+         </Grid>
+        <Grid item xs>
+          {/* <Item>xs</Item> */}
+        </Grid>
+      </Grid>
+    </Box>
     </div>
   );
 }
