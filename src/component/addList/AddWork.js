@@ -29,12 +29,13 @@ class AddWork extends Component {
     console.log("note", note);
   }
   deleteTask(id){
-    const removedArr = this.state.note.find(note => note.id = id);
-    const arr = this.state.note.pop(removedArr);
-    console.log(arr);
+    console.log("delete", id)
+    const  findNote = this.state.note.filter(note => note.id !== id);
     
+    // const removedArr = this.state.note.find(note => note.id = id);
+    // const arr = this.state.note.pop(removedArr);    
     this.setState({
-      note: arr
+      note: findNote
     })
   }
 
