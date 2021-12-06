@@ -13,11 +13,10 @@ class Cards extends React.Component {
     }
    
   render(){
-    const {id, content} = this.state;
     return (
         <div className="todo-row">
-         <div>{content}</div>
-         <div className="icon" onClick= {() => this.props.deleteTask(id)}>
+         <div>{this.props.content}</div>
+         <div className="icon" onClick= {() => this.props.deleteTask(this.props.id)}>
            <DeleteIcon/>
          </div>
         </div>

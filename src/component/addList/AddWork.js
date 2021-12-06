@@ -17,29 +17,26 @@ class AddWork extends Component {
   handleAdd(e) {
     e.preventDefault();
     const { content, note } = this.state;
-    const task = {
+    const task ={
       content: content,
-      id: note.length +1,
+      id: note.length,
     };
-
     note.push(task);
     this.setState({
       note: note,
     });
-    console.log("note", note);
   }
   deleteTask(id){
     console.log("delete", id)
-    const  findNote = this.state.note.filter(note => note.id !== id);
-    
-    // const removedArr = this.state.note.find(note => note.id = id);
-    // const arr = this.state.note.pop(removedArr);    
+    const note = this.state.note;
+    let filter = note.filter(function(element) {
+      return element.id !== id;
+    });
+    console.log("filter", filter)
     this.setState({
-      note: findNote
+      note: filter
     })
   }
-
-  componentDidMount() {}
 
   handleChange(e) {
     this.setState({
@@ -58,9 +55,9 @@ class AddWork extends Component {
       
         <div className="cards">    
         {this.state.note.length > 0
-                ? this.state.note.map((note, index) => (
+                ? this.state.note.map((note) => (
                       <Cards
-                        key = {index}
+                        key = {note.id}
                         content={note.content}
                         id = {note.id}
                         deleteTask ={this.deleteTask}
