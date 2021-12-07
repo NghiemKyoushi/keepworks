@@ -1,5 +1,5 @@
 import './App.css';
-import AddWork from  "../src/component/addList/AddWork";
+import TodoList from  "./component/TodoLists/TodoList";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 function App() {
@@ -11,7 +11,7 @@ function App() {
           {/* <Item>xs</Item> */}
         </Grid>
         <Grid item xs={6}>
-        <AddWork/>
+        <TodoList/>
          </Grid>
         <Grid item xs>
           {/* <Item>xs</Item> */}
