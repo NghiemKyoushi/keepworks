@@ -1,9 +1,10 @@
 .container{
     background-color: rgb(43, 43, 73);
-    height: 600px;
+    min-height: 600px;
     border-radius: 8%;
     display: block;
     background-size: auto;
+    height: fit-content;
 }
 .todo-form {
     display: flex;
